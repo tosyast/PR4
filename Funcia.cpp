@@ -7,11 +7,12 @@ int factorial(int n) {
     int num;
     if (n > 0) {
         int fact = 1;
+        int &ref = fact;
         for (int s = 1; s <= n; s++) {
             fact *= s;
         }
         std::cout << "Факториал: " << fact;
-        return fact;
+        return ref;
     }
     else {
         std::cout << "Число должно быть больше 0. Введите еще раз: ";
